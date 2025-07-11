@@ -14,7 +14,6 @@ public class HumanTemperature : LivingEntity
             {
                 item.Use(gameObject);
                 Debug.Log(humanTemperature);
-                Destroy(other.gameObject);
             }
         }
     }

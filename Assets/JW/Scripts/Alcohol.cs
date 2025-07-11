@@ -14,6 +14,7 @@ public class Alcohol : MonoBehaviour, IItem
             // 체력 회복 실행
             life.RestoreHealth(itemTemperature);
             Debug.Log("온도 증가");
+            Destroy(gameObject);
         }
     }
 }

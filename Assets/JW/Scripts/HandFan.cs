@@ -14,6 +14,7 @@ public class HandFan : MonoBehaviour, IItem
             // 체력 회복 실행
             life.RestoreHealth(itemTemperature);
             Debug.Log("온도 감소");
+            Destroy(gameObject);
         }
     }
 }

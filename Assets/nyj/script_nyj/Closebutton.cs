@@ -3,6 +3,8 @@ using UnityEngine;
 public class Closebutton : MonoBehaviour
 {
     public GameObject closeButtonUI;
+    public CharacterRaycaster leftCharacterRaycaster;
+    public CharacterRaycaster rightCharacterRaycaster;
     
     public CharacterRaycaster[] allCharacterRaycasters;
 
@@ -16,11 +18,16 @@ public class Closebutton : MonoBehaviour
 
             foreach (CharacterRaycaster raycaster in allCharacterRaycasters)
             {
-                if (raycaster != null)
+                if (leftCharacterRaycaster != null)
                 {
-                    raycaster.SetUiManuallyClosed(true);
-                    raycaster.SetUiActive(false);
-                    
+                    leftCharacterRaycaster.SetUiManuallyClosed(true);
+                    leftCharacterRaycaster.SetUiActive(false);
+
+                }
+                if (rightCharacterRaycaster != null)
+                {
+                rightCharacterRaycaster.SetUiManuallyClosed(true); 
+                rightCharacterRaycaster.SetUiActive(false); 
                 }
             }
         }

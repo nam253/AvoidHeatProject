@@ -31,10 +31,7 @@ public class CharacterRaycaster : MonoBehaviour
             raycastActivateAction.action.performed += OnRaycastActivate;
             raycastActivateAction.action.Enable();
         }
-        if (uiCanvasPrefab != null)
-        {
-            uiCanvasPrefab.SetActive(false);
-        }
+
     }
 
     void OnDestroy()
@@ -58,59 +55,54 @@ public class CharacterRaycaster : MonoBehaviour
             return;
         }
         RaycastHit hit;
-        Vector3 rayOrigin = transform.position;
-        Vector3 rayDirection = transform.forward;
-
-        if (Physics.Raycast(rayOrigin, rayDirection, out hit, raycastDistance))
-        {
-            if (hit.collider != null && hit.collider.CompareTag(targetTag))
+        bool hitResult = rayInteractor.TryGetCurrent3DRaycastHit(out hit);
+        
+        if (hitResult && hit.collider != null && hit.collider.CompareTag(targetTag))
+            if (currentUICanvasInstance == null)
             {
                 if (uiCanvasPrefab != null)
                 {
-                    GameObject currentUICanvasInstance = Instantiate(uiCanvasPrefab, transform.position + transform.forward * 1f, Quaternion.identity);
+                    currentUICanvasInstance = Instantiate(uiCanvasPrefab, transform.position + transform.forward * 1f, Quaternion.identity);
+
                     Closebutton closebuttonScript = currentUICanvasInstance.GetComponentInChildren<Closebutton>(true);
 
                     if (closebuttonScript != null)
                     {
                         closebuttonScript.closeButtonUI = currentUICanvasInstance;
-                        closebuttonScript.allCharacterRaycasters = FindObjectsOfType<CharacterRaycaster>();
                     }
 
                     currentUICanvasInstance.SetActive(true);
 
                     uiActive = true;
                 }
-                else if (!uiActive && currentUICanvasInstance != null)
-                {
-                    currentUICanvasInstance.SetActive(true);
-                    uiActive = true;
-                }
-
 
             }
-
-
-        }
-
-    }
-    public void SetUiManuallyClosed(bool closed)
-    {
-        uiManuallyClosed = closed;
-
-        if (closed)
-        {
-            uiActive = false;
-
-            if (currentUICanvasInstance != null && currentUICanvasInstance.activeSelf)
+            else if (!uiActive && currentUICanvasInstance != null)
             {
-                currentUICanvasInstance.SetActive(false);
+                currentUICanvasInstance.SetActive(true);
+                uiActive = true;
             }
+
+
+        }
+    
+    public void SetUiManuallyClosed(bool closed)
+{
+    uiManuallyClosed = closed;
+
+    if (closed)
+    {
+        uiActive = false;
+
+        if (currentUICanvasInstance != null && currentUICanvasInstance.activeSelf)
+        {
+            currentUICanvasInstance.SetActive(false);
         }
     }
+}
     public void SetUiActive(bool activeState)
     {
         uiActive = activeState;
-        Debug.Log($"CharacterRaycaster: uiActive set to: {activeState}");
     }
     
 }

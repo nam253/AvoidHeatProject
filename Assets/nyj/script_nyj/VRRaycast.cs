@@ -45,9 +45,6 @@ public class VRRaycast : MonoBehaviour
         Ray ray = new Ray(transform.position, transform.forward);
         RaycastHit hit;
 
-        Debug.DrawRay(transform.position, transform.forward * rayDistance, Color.red); // Scene 뷰에서 빨간색 선 확인
-        Debug.Log($"Raycast origin: {transform.position}, direction: {transform.forward}"); // 레이의 시작점과 방향 로그
-
         if (Physics.Raycast(ray, out hit, rayDistance))
         {
             if (hit.collider.CompareTag(targetTag))
@@ -55,10 +52,6 @@ public class VRRaycast : MonoBehaviour
                 uiPanel.SetActive(true);
                 uiShownOnce = true;
             }
-        }
-        else
-        {
-        Debug.Log("Raycast MISSED."); // 레이캐스트가 아무것도 맞추지 못할 때 로그
         }
     }
 

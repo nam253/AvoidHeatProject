@@ -5,9 +5,12 @@ using UnityEngine.UI;
 public class VRRaycast : MonoBehaviour
 {
     public float rayDistance = 10f;
-    public LayerMask targetLayer;
+    //public LayerMask targetLayer;
+    public string targetTag = "Character";
     public GameObject uiPanel;
     public Button closeButton;
+
+    public GameObject missionPanel;
     private bool uiShownOnce = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,6 +22,10 @@ public class VRRaycast : MonoBehaviour
         if (closeButton != null)
         {
             closeButton.onClick.AddListener(CloseUIPanel);
+        }
+        if (missionPanel != null)
+        {
+            missionPanel.SetActive(false);
         }
 
     }
@@ -41,9 +48,9 @@ public class VRRaycast : MonoBehaviour
         Debug.DrawRay(transform.position, transform.forward * rayDistance, Color.red); // Scene 뷰에서 빨간색 선 확인
         Debug.Log($"Raycast origin: {transform.position}, direction: {transform.forward}"); // 레이의 시작점과 방향 로그
 
-        if (Physics.Raycast(ray, out hit, rayDistance, targetLayer))
+        if (Physics.Raycast(ray, out hit, rayDistance))
         {
-            if (uiPanel != null && !uiPanel.activeInHierarchy)
+            if (hit.collider.CompareTag(targetTag))
             {
                 uiPanel.SetActive(true);
                 uiShownOnce = true;
@@ -60,6 +67,10 @@ public class VRRaycast : MonoBehaviour
         if (uiPanel != null)
         {
             uiPanel.SetActive(false);
+        }
+        if (missionPanel != null)
+        {
+            missionPanel.SetActive(true);
         }
     }
 }

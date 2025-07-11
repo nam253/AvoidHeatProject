@@ -22,7 +22,7 @@ public class Animation : MonoBehaviour
         if (temperature <= 36.5f && bIsAwake != true)
         {
             bIsAwake = true;
-            animator.SetTrigger("standing");
+            animator.SetTrigger("Standing");
         }
     }
 }   

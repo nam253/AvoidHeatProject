@@ -1,0 +1,65 @@
+{
+    "name": "XRControls",
+    "maps": [
+        {
+            "name": "Gameplay",
+            "id": "ff0714ca-b342-4d49-a12d-f36c716ff978",
+            "actions": [
+                {
+                    "name": "ActivateFan",
+                    "type": "Button",
+                    "id": "cc6d873c-80ff-4964-aadf-f4456c31c9c7",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "New action1",
+                    "type": "Button",
+                    "id": "e4146c09-196a-4d4c-ad0e-781cdf93636c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "94718d9c-d46c-40eb-8480-351d919a9c11",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ActivateFan",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "29097fdd-7aea-469b-9ffa-7ae3a5b9904d",
+                    "path": "<XRController>{LeftHand}/{TriggerButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ActivateFan",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f5567e0f-7639-4afc-911d-f484f3307912",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

@@ -44,10 +44,10 @@ public class LivingEntity : MonoBehaviour {
     // 사망 처리
     public virtual void Die() {
         // onDeath 이벤트에 등록된 메서드가 있다면 실행
-        if (onDeath != null)
-        {
-            onDeath();
-        }
+        // if (onDeath != null)
+        // {
+        //     onDeath();
+        // }
 
         // 사망 상태를 참으로 변경
         dead = true;

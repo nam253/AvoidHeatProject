@@ -2,15 +2,18 @@ using UnityEngine;
 
 public class SafeZone : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public float coolingRatePerSecond = 1f;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
+        LivingEntity life = other.GetComponent<LivingEntity>();
         
+        // LivingEntity컴포넌트가 있다면
+        if (life != null)
+        {
+            // 체력 회복 실행
+            life.RestoreHealth(coolingRatePerSecond);
+            Debug.Log("온도 증가");
+        }
     }
 }

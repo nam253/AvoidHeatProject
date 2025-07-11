@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SafeZone : MonoBehaviour
 {
-    public float coolingRatePerSecond = 1f;
+    public float coolingRatePerSecond = -1f;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -13,7 +13,9 @@ public class SafeZone : MonoBehaviour
         {
             // 체력 회복 실행
             life.RestoreHealth(coolingRatePerSecond);
-            Debug.Log("온도 증가");
+            
+            Debug.Log("온도 감소" + life.humanTemperature);
+            
         }
     }
 }

@@ -98,7 +98,13 @@ InitTestScene*.unity*
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
 
+# MacOS generated DS_Store
 .DS_Store
+._.DS_Store
+**/.DS_Store
+**/._.DS_Store
+
+# No Huge Assets
 /**/_Street/
 /**/_Street/**
 /**/_Street.meta

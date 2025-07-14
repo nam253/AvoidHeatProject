@@ -1,16 +1,22 @@
+using System.Collections.Generic;
+using Unity.XR.CoreUtils;
 using UnityEngine;
 
 public class Modal : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public bool isRaycastHit { get; set; }
+    GameObject modal;
+
     void Start()
     {
-        
+        modal = GetComponentInChildren<Modal>().gameObject;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (isRaycastHit)
+        {
+            
+        }
     }
 }

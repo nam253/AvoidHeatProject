@@ -1,16 +1,28 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
+using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
 public class PopOnRay : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    XRRayInteractor xrRayInteractor;
+    RaycastHit raycastHit;
+    GameObject raycastHitTarget;
+
+    void Awake()
     {
-        
+        TryGetComponent<XRRayInteractor>(out xrRayInteractor);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        xrRayInteractor.TryGetCurrent3DRaycastHit(out raycastHit);
+
+        if (raycastHit.collider.GetComponent<XRSimpleInteractable>() != null)
+        {
+            raycastHitTarget = raycastHit.collider.gameObject;
+
+            
+        }
     }
 }

@@ -7,6 +7,9 @@ TagManager:
   - Character
   - bottleofwater
   - alcohol
+  - ice
+  - handfan
+  - umb
   layers:
   - Default
   - TransparentFX

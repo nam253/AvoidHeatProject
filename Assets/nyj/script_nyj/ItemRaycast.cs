@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem.Controls;
 using UnityEngine.Rendering;
@@ -12,8 +13,8 @@ public class ItemRaycast : MonoBehaviour
     public Transform rightRayOrigin;
     public GameObject infoPanel;
 
-    public Text titleText;
-    public Text bodyText;
+    public TextMeshProUGUI titleText;
+    public TextMeshProUGUI bodyText;
     public Vector3 panelOffset = new Vector3(0, 5f, 0);
 
     [System.Serializable]
@@ -61,6 +62,8 @@ public class ItemRaycast : MonoBehaviour
         if (Physics.Raycast(ray, out RaycastHit hit, rayDistance))
         {
             string tag = hit.collider.tag;
+
+            if (tag == "Character") return;
 
             if (descriptionMap.ContainsKey(tag))
             {

@@ -11,6 +11,8 @@ public class SafeZone : MonoBehaviour
         // LivingEntity컴포넌트가 있다면
         if (life != null)
         {
+            GameManager.gameManager.missionState = GameManager.State.AVOIDINGSUN;
+            Debug.Log(GameManager.gameManager.missionState);
             // 체력 회복 실행
             life.RestoreHealth(coolingRatePerSecond);
             

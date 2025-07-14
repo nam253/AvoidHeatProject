@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class HandFan : MonoBehaviour, IItem
@@ -11,6 +12,9 @@ public class HandFan : MonoBehaviour, IItem
         // LivingEntity컴포넌트가 있다면
         if (life != null)
         {
+            GameManager.gameManager.missionState = GameManager.State.ICEBAG;
+            Debug.Log(GameManager.gameManager.missionState);
+            
             // 체력 회복 실행
             life.RestoreHealth(itemTemperature);
             Debug.Log("온도 감소");

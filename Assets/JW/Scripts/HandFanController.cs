@@ -112,6 +112,8 @@ public class HandFanController : MonoBehaviour
 
         if (other.TryGetComponent<HumanTemperature>(out var human) && !human.dead)
         {
+            GameManager.gameManager.missionState = GameManager.State.FANNING;
+            Debug.Log(GameManager.gameManager.missionState);
             human.RestoreHealth(-coolingRatePerSecond * Time.deltaTime);
             Debug.Log(human.humanTemperature);
         }

@@ -13,6 +13,7 @@ public class Stream : MonoBehaviour
    private Vector3 targetPosition = Vector3.zero;
    public float amount = 1;
 
+   public bool isAlcohol = false;
    // 플레이어 레이어 번호 캐시
    public LayerMask targetLayers;
 
@@ -20,6 +21,7 @@ public class Stream : MonoBehaviour
    {
       lineRenderer     = GetComponent<LineRenderer>();
       splashParticle   = GetComponentInChildren<ParticleSystem>();
+      
    }
 
    private void Start()
@@ -38,8 +40,7 @@ public class Stream : MonoBehaviour
    {
       while (gameObject.activeSelf)
       {
-         targetPosition = FindEndPoint();   
-       
+         targetPosition = FindEndPoint();
          MoveToPosition(0,transform.position);
          AnimateToPosition(1,targetPosition);
          
@@ -56,6 +57,11 @@ public class Stream : MonoBehaviour
       if (other.TryGetComponent<HumanTemperature>(out var human))
       {
          human.RestoreHealth(amount);
+         if (!isAlcohol)
+         {
+            GameManager.gameManager.missionState = GameManager.State.WATERING;
+            Debug.Log(GameManager.gameManager.missionState);   
+         }
          Debug.Log($"Other Layer: {other.gameObject.layer}, Mask Value: {targetLayers.value}");
          Debug.Log($"Stream hit player, new temp: {human.humanTemperature}");
       }

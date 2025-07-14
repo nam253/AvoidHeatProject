@@ -3619,7 +3619,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 1
+    enabled: 0
     serializedVersion: 4
     type: 1
     collisionMode: 0
@@ -4892,6 +4892,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4fb5bb872e1e574481445a9b19c880a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  amount: -1
+  targetLayers:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!120 &5238570228697279500
 LineRenderer:
   serializedVersion: 2
@@ -5027,5 +5031,5 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 0.01
   m_Center: {x: 0, y: 0, z: 0}

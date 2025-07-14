@@ -42,11 +42,14 @@ public class PhoneCall : MonoBehaviour
 
     public void ClosePhone()
     {
-        Phoneimg.SetActive(false);
+        GameManager.gameManager.missionState = GameManager.State.AVOIDINGSUN;
+        Debug.Log(GameManager.gameManager.missionState);
+
         if (audioSource && endCallNarration)
         {
             audioSource.PlayOneShot(endCallNarration);
         }
+        Phoneimg.SetActive(false);
     }
 
     // Update is called once per frame

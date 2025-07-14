@@ -189,6 +189,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: classic_umbrela_opened
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1541fab46258f4f92818770a4f8d1ddf, type: 3}
+      propertyPath: m_TagString
+      value: umb
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: -1510273702440621866, guid: 1541fab46258f4f92818770a4f8d1ddf, type: 3}

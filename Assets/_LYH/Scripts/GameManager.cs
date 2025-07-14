@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
         ICEBAG,             // Touch him with icebag to decrease temperature
         AWAKEN,             // He's now awake
     }
-    private State missionStateInner = State.CALLING; // Initial state
+    [SerializeField] private State missionStateInner = State.CALLING; // Initial state
     public State missionState
     {
         get { return missionStateInner; }

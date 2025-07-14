@@ -11,11 +11,15 @@ public class Stream : MonoBehaviour
    
    
    private Vector3 targetPosition = Vector3.zero;
+   public float amount = 1;
+
+   // 플레이어 레이어 번호 캐시
+   public LayerMask targetLayers;
 
    private void Awake()
    {
-      lineRenderer = GetComponent<LineRenderer>();
-      splashParticle = GetComponentInChildren<ParticleSystem>();
+      lineRenderer     = GetComponent<LineRenderer>();
+      splashParticle   = GetComponentInChildren<ParticleSystem>();
    }
 
    private void Start()
@@ -44,11 +48,16 @@ public class Stream : MonoBehaviour
    }
    private void OnTriggerEnter(Collider other)
    {
-      if (!gameObject.activeSelf) return;
-      if (other.CompareTag("Player") && other.TryGetComponent<HumanTemperature>(out var human) && !human.dead)
+      // 1) 해당 오브젝트 레이어가 LayerMask에 포함되어 있는지 확인
+      if ((targetLayers.value & (1 << other.gameObject.layer)) == 0) 
+         return;
+
+      // 2) HumanTemperature 컴포넌트 확인
+      if (other.TryGetComponent<HumanTemperature>(out var human))
       {
-         human.RestoreHealth(-1f);
-         Debug.Log("Stream hit player, new temp: " + human.humanTemperature);
+         human.RestoreHealth(amount);
+         Debug.Log($"Other Layer: {other.gameObject.layer}, Mask Value: {targetLayers.value}");
+         Debug.Log($"Stream hit player, new temp: {human.humanTemperature}");
       }
    }
    public void End()

@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     // Coroutine Delayer
-    private WaitForSeconds delayer = new WaitForSeconds(0.8f);
+    private WaitForSeconds delayer = new WaitForSeconds(1.0f);
 
     // UIManager Static Instance
     private static UIManager uiManagerInner;
@@ -46,7 +46,7 @@ public class UIManager : MonoBehaviour
         missionObjectivePanel = GetComponentInChildren<MissionPanel>();
         temperatureMeterPanel = GetComponentInChildren<TemperaturePanel>();
 
-        mOTexts = Resources.Load<TextAsset>("Texts/MissionObjectives1");
+        mOTexts = Resources.Load<TextAsset>("Texts/MissionObjectives0");
 
         // DontDestroyOnLoad(gameObject);
 
@@ -59,34 +59,34 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
-        
+        StartCoroutine(StateCheck());
     }
 
     void Update()
     {
-        // UpdateUIs();
+
     }
 
     public IEnumerator StateCheck()
     {
-        currentState = GameManager.gameManager.missionState;
-
         while (true)
         {
+            currentState = GameManager.gameManager.missionState;
+
             if (currentState != previousState)
             {
-                
+                UpdateUIs();
             }
 
             yield return delayer;
-        }
 
-        previousState = currentState;
+            previousState = currentState;
+        }
     }
 
     void UpdateUIs()
     {
-        mOTexts = Resources.Load<TextAsset>("Texts/MissionObjectives1");
+        mOTexts = Resources.Load<TextAsset>("Texts/MissionObjectives" + currentState);
 
         Desc mO = JsonUtility.FromJson<Desc>(mOTexts.ToString());
         Text txt = missionObjectivePanel.gameObject.GetComponentInChildren<Text>();

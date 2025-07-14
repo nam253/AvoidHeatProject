@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class LookAt : MonoBehaviour
 {
-    public Camera cam;
+    public Transform camPos;
 
     void Start()
     {
-        
+        camPos = GameObject.Find("Main Camera").GetComponent<Transform>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        
+        transform.LookAt(camPos);
     }
 }

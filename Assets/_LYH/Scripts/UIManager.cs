@@ -1,9 +1,14 @@
 using System;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
+    // Coroutine Delayer
+    private WaitForSeconds delayer = new WaitForSeconds(0.8f);
+
     // UIManager Static Instance
     private static UIManager uiManagerInner;
     public static UIManager uiManager
@@ -31,6 +36,8 @@ public class UIManager : MonoBehaviour
         public string description;
     }
     public TextAsset mOTexts { get; private set; } // Save Json via "Resources.Load<TextAsset>(Your filepath)"
+    public GameManager.State currentState;
+    public GameManager.State previousState;
 
     void Awake()
     {
@@ -39,7 +46,7 @@ public class UIManager : MonoBehaviour
         missionObjectivePanel = GetComponentInChildren<MissionPanel>();
         temperatureMeterPanel = GetComponentInChildren<TemperaturePanel>();
 
-        mOTexts = Resources.Load<TextAsset>("Texts/MissionObjectives");
+        mOTexts = Resources.Load<TextAsset>("Texts/MissionObjectives1");
 
         // DontDestroyOnLoad(gameObject);
 
@@ -57,14 +64,34 @@ public class UIManager : MonoBehaviour
 
     void Update()
     {
-        UpdateUIs();
+        // UpdateUIs();
+    }
+
+    public IEnumerator StateCheck()
+    {
+        currentState = GameManager.gameManager.missionState;
+
+        while (true)
+        {
+            if (currentState != previousState)
+            {
+                
+            }
+
+            yield return delayer;
+        }
+
+        previousState = currentState;
     }
 
     void UpdateUIs()
     {
+        mOTexts = Resources.Load<TextAsset>("Texts/MissionObjectives1");
+
         Desc mO = JsonUtility.FromJson<Desc>(mOTexts.ToString());
         Text txt = missionObjectivePanel.gameObject.GetComponentInChildren<Text>();
-        
+
         txt.text += mO.description;
+        txt.text += "\n\n";
     }
 }

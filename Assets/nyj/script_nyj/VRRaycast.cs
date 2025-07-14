@@ -27,7 +27,6 @@ public class VRRaycast : MonoBehaviour
         {
             missionPanel.SetActive(false);
         }
-
     }
 
     // Update is called once per frame

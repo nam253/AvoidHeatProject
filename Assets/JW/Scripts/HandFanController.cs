@@ -15,8 +15,8 @@ public class HandFanController : MonoBehaviour
 
     [Header("On/Off Sound")]
     [Tooltip("켜거나 끌 때 재생할 클립")]
-    public AudioClip onOffSound;
-
+    public AudioClip windSound;
+    public AudioClip offSound;
     private AudioSource    audioSource;
     private bool           isActive = false;
     private Coroutine      coolingCoroutine;
@@ -37,6 +37,7 @@ public class HandFanController : MonoBehaviour
     {
         if (audioSource == null)
             audioSource = GetComponent<AudioSource>();
+
     }
 
     /// <summary>
@@ -59,28 +60,30 @@ public class HandFanController : MonoBehaviour
 
     private void StartCooling()
     {
-        PlaySound(onOffSound);
+        PlaySound(windSound);
+        PlaySound(offSound);
         isActive = true;
         coolingZone.enabled = true;
-
         // 자동 종료 코루틴 시작
         coolingCoroutine = StartCoroutine(CoolingRoutine());
     }
 
     private void StopCoolingManual()
     {
+        
         // 실행 중인 코루틴이 있으면 중단
         if (coolingCoroutine != null)
         {
             StopCoroutine(coolingCoroutine);
             coolingCoroutine = null;
+            audioSource.Stop();
         }
-
+        PlaySound(offSound);
         // 즉시 비활성화
         coolingZone.enabled = false;
         isActive = false;
 
-        PlaySound(onOffSound);
+        //PlaySound(windSound);
     }
 
     private IEnumerator CoolingRoutine()
@@ -101,8 +104,6 @@ public class HandFanController : MonoBehaviour
         coolingZone.enabled = false;
         isActive = false;
         coolingCoroutine = null;
-
-        PlaySound(onOffSound);
     }
 
     void OnTriggerStay(Collider other)

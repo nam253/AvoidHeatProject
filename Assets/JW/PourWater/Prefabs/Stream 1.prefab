@@ -4854,9 +4854,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5238570228697279503}
-  - component: {fileID: 5238570228697279501}
   - component: {fileID: 5238570228697279500}
   - component: {fileID: 1789474496879981114}
+  - component: {fileID: 839735161662369270}
   m_Layer: 0
   m_Name: Stream 1
   m_TagString: Untagged
@@ -4880,22 +4880,6 @@ Transform:
   - {fileID: 269008120}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5238570228697279501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5238570228697279498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4fb5bb872e1e574481445a9b19c880a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  amount: 1
-  targetLayers:
-    serializedVersion: 2
-    m_Bits: 128
 --- !u!120 &5238570228697279500
 LineRenderer:
   serializedVersion: 2
@@ -5033,3 +5017,20 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.05
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &839735161662369270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5238570228697279498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4fb5bb872e1e574481445a9b19c880a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amount: 1
+  isAlcohol: 1
+  targetLayers:
+    serializedVersion: 2
+    m_Bits: 128

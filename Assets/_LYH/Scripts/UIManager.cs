@@ -64,7 +64,7 @@ public class UIManager : MonoBehaviour
 
     void Update()
     {
-        UpdateUIs();
+        // UpdateUIs();
     }
 
     public IEnumerator StateCheck()

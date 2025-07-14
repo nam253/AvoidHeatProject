@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     public State missionState
     {
         get { return missionStateInner; }
-        set { missionState = value; }
+        set { missionStateInner = value; }
     }
 
     void Awake()

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2419737411937292816}
   - component: {fileID: 4543854654343981335}
+  - component: {fileID: 4168764643186246129}
   m_Layer: 0
   m_Name: UIManager_yj
   m_TagString: Untagged
@@ -72,3 +73,24 @@ MonoBehaviour:
     description:
       title: "\uC6B0\uC0B0"
       body: "\uC6B0\uC0B0\uC744 \uC0AC\uC6A9\uD55C\uB2E4"
+--- !u!114 &4168764643186246129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807697292297713450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a58c56af67131478f84d835eecd9c363, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stepPanels:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  currentStep: 0
+  livingentity: {fileID: 0}
+  temperatureDropPerStep: 0.75
+  TemperatureText: {fileID: 0}

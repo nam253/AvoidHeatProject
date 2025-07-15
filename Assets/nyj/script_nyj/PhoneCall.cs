@@ -13,6 +13,7 @@ public class PhoneCall : MonoBehaviour
     public AudioClip endCallNarration;
 
     private string phoneNumber = "";
+    public Step step;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -44,6 +45,7 @@ public class PhoneCall : MonoBehaviour
     {
         GameManager.gameManager.missionState = GameManager.State.AVOIDINGSUN;
         Debug.Log(GameManager.gameManager.missionState);
+        step.CompleteCurrentStep();
 
         if (audioSource && endCallNarration)
         {
@@ -52,9 +54,5 @@ public class PhoneCall : MonoBehaviour
         Phoneimg.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

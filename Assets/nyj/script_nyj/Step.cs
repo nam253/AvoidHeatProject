@@ -1,0 +1,50 @@
+using TMPro;
+using UnityEngine;
+
+public class Step : MonoBehaviour
+{
+    public GameObject[] stepPanels;
+    public int currentStep = 0;
+    public LivingEntity livingentity;
+    public float temperatureDropPerStep = 0.75f;
+
+    public TextMeshProUGUI TemperatureText;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        for (int i = 0; i < stepPanels.Length; i++)
+        {
+            stepPanels[i].SetActive(false);
+        }
+
+        stepPanels[0].SetActive(true);
+
+        UpdateTemperatrueUI();
+    }
+
+    public void CompleteCurrentStep()
+    {
+        stepPanels[currentStep].SetActive(false);
+
+        currentStep++;
+
+        if (currentStep < stepPanels.Length)
+        {
+            stepPanels[currentStep].SetActive(true);
+        }
+
+        if (currentStep > 1)
+        {
+            livingentity.startingTemperature -= temperatureDropPerStep;
+        }
+        UpdateTemperatrueUI();
+    }
+
+    void UpdateTemperatrueUI()
+    {
+        TemperatureText.text = "환자 체온: " + livingentity.startingTemperature.ToString("F1") + "°C";
+    }
+
+    
+}
+

@@ -32,11 +32,13 @@ public class Step : MonoBehaviour
         stepPanels[currentStep].SetActive(false);
 
         currentStep++;
+        Debug.Log(currentStep);
 
         if (currentStep < stepPanels.Length)
         {
             stepPanels[currentStep].SetActive(true);
         }
+
 
         /*if (currentStep > 1)
         {

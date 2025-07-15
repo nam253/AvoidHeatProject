@@ -13,6 +13,7 @@ public class ShadowyZone : MonoBehaviour
     {
         if (GameManager.gameManager.missionState == GameManager.State.AVOIDINGSUN && collider.gameObject == patient)
         {
+            Step.stepInstance.CompleteCurrentStep();
             GameManager.gameManager.missionState = GameManager.State.LOOSENINGJACKET;
         }
     }

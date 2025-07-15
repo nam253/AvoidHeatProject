@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Step : MonoBehaviour
 {
+    public static Step stepInstance;
     public GameObject[] stepPanels;
     public int currentStep = 0;
     public LivingEntity livingentity;
@@ -11,6 +12,11 @@ public class Step : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        if (stepInstance == null)
+        {
+            stepInstance = this;
+        }
+
         for (int i = 0; i < stepPanels.Length; i++)
         {
             stepPanels[i].SetActive(false);

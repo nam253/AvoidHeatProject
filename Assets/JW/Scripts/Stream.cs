@@ -61,6 +61,9 @@ public class Stream : MonoBehaviour
          {
             GameManager.gameManager.missionState = GameManager.State.FANNING;
             Debug.Log(GameManager.gameManager.missionState);   
+
+            // script_nyj 참고
+            Step.stepInstance.CompleteCurrentStep();
          }
          Debug.Log($"Other Layer: {other.gameObject.layer}, Mask Value: {targetLayers.value}");
          Debug.Log($"Stream hit player, new temp: {human.humanTemperature}");

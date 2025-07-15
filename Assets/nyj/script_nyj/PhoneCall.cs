@@ -13,7 +13,7 @@ public class PhoneCall : MonoBehaviour
     public AudioClip endCallNarration;
 
     private string phoneNumber = "";
-    public Step step;
+    // public Step step;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -42,8 +42,9 @@ public class PhoneCall : MonoBehaviour
     public void ClosePhone()
     {
         GameManager.gameManager.missionState = GameManager.State.AVOIDINGSUN;
+        Step.stepInstance.CompleteCurrentStep();
         Debug.Log(GameManager.gameManager.missionState);
-        step.CompleteCurrentStep();
+        // step.CompleteCurrentStep();
 
         if (audioSource && endCallNarration)
         {

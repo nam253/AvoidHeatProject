@@ -1469,6 +1469,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnNumberPressed
       objectReference: {fileID: 0}
+    - target: {fileID: 5461451583126766715, guid: d134ef877b77d41998120fe252b6c829, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1126325237, guid: f94c0e3a2f79342b7aa82dbf777ddd08, type: 3}
     - target: {fileID: 5551111392301151110, guid: d134ef877b77d41998120fe252b6c829, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

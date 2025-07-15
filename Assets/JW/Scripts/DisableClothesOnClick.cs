@@ -46,7 +46,7 @@ public class DisableClothesOnClick : MonoBehaviour
 
             // (선택) 기존 Transform 세팅 복사
             newObj.transform.localScale = oldRoot.transform.localScale;
-
+            GameManager.gameManager.missionState = GameManager.State.LOOSENINGJACKET;
             // 원본 삭제
             Destroy(oldRoot);
         }

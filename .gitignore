@@ -113,3 +113,7 @@ InitTestScene*.unity*
 .ttf
 **/.otf
 **/.ttf
+/**/.otf
+/**/.ttf
+/**/._.otf
+/**/._.ttf

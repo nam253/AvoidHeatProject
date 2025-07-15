@@ -6,7 +6,7 @@ using System.Collections;
 public class ScreenFlash : MonoBehaviour
 {
     [Header("Flash Settings")]
-    public Image flashImage;
+    public Image[] flashImages;
     [Range(0,1)] public float maxAlpha = 0.5f;
 
     [Header("Temperature Range")]
@@ -23,12 +23,16 @@ public class ScreenFlash : MonoBehaviour
 
     void Reset()
     {
-        flashImage = GetComponentInChildren<Image>();
-        if (flashImage)
+        for (int i = 0; i < flashImages.Length; i++)
         {
-            flashImage.color = new Color(1,0,0,0);
-            flashImage.raycastTarget = false;
+            flashImages[i] = GetComponentInChildren<Image>();
+                             if (flashImages[i])
+                             {
+                                 flashImages[i].color = new Color(1,0,0,0);
+                                 flashImages[i].raycastTarget = false;
+                             }
         }
+        
     }
 
     void Update()
@@ -58,25 +62,30 @@ public class ScreenFlash : MonoBehaviour
             for (float t = 0f; t < half; t += Time.deltaTime)
             {
                 float a = Mathf.Lerp(0f, alphaTarget, t / half);
-                flashImage.color = new Color(1,0,0,a);
+                foreach (var img in flashImages)
+                    img.color = new Color(1,0,0,a);
                 yield return null;
             }
             // Ensure fully on
-            flashImage.color = new Color(1,0,0, alphaTarget);
+            foreach (var img in flashImages)
+                img.color = new Color(1,0,0,alphaTarget);
 
             // Fade-out
             for (float t = 0f; t < half; t += Time.deltaTime)
             {
                 float a = Mathf.Lerp(alphaTarget, 0f, t / half);
-                flashImage.color = new Color(1,0,0,a);
+                foreach (var img in flashImages)
+                    img.color = new Color(1,0,0,a);
                 yield return null;
             }
             // Ensure fully off
-            flashImage.color = new Color(1,0,0, 0f);
+            foreach (var img in flashImages)
+                img.color = new Color(1,0,0,0);
         }
 
         // 끝나면 완전 투명
-        flashImage.color = new Color(1,0,0,0);
+        foreach (var img in flashImages)
+            img.color = new Color(1,0,0,0);
         isBlinking = false;
     }
 }

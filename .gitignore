@@ -109,3 +109,7 @@ InitTestScene*.unity*
 /**/_Street/**
 /**/_Street.meta
 .vscode/settings.json
+.otf
+.ttf
+**/.otf
+**/.ttf

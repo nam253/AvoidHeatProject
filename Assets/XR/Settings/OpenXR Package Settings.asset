@@ -1192,7 +1192,11 @@ MonoBehaviour:
   m_Name: Standalone
   m_EditorClassIdentifier: 
   features:
+<<<<<<< HEAD
   - {fileID: 4656772062675169803}
+=======
+  - {fileID: -3565502277235883483}
+>>>>>>> c1ec1a2 (Chores: Outers Scripts WIP)
   - {fileID: -5521003157025689753}
   - {fileID: 6962048239022320766}
   - {fileID: -2657329090682451149}
@@ -1210,12 +1214,20 @@ MonoBehaviour:
   - {fileID: 1082554740538188143}
   - {fileID: -5662023960795129445}
   - {fileID: 1212044616984513504}
+<<<<<<< HEAD
   - {fileID: -232551440751256559}
+=======
+  - {fileID: 939842270225989616}
+>>>>>>> c1ec1a2 (Chores: Outers Scripts WIP)
   - {fileID: 8523394208503988444}
   - {fileID: -3053497970855537007}
   - {fileID: 1207046372073543864}
   - {fileID: 8045547410298048343}
+<<<<<<< HEAD
   - {fileID: -6622594118915745376}
+=======
+  - {fileID: 6278817777430079668}
+>>>>>>> c1ec1a2 (Chores: Outers Scripts WIP)
   - {fileID: -4066631856078275436}
   - {fileID: 2912160782984874524}
   - {fileID: -2408666906686171688}

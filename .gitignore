@@ -118,4 +118,4 @@ InitTestScene*.unity*
 /**/.ttf
 /**/._.otf
 /**/._.ttf
-.otf.meta
+*.otf.meta

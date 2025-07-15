@@ -12,6 +12,11 @@ public class HandFan : MonoBehaviour, IItem
         // LivingEntity컴포넌트가 있다면
         if (life != null)
         {
+            if (GameManager.gameManager.missionState == GameManager.State.ICEBAG)
+            {
+                // script_nyj 참고
+                Step.stepInstance.CompleteCurrentStep();
+            }
 
             GameManager.gameManager.missionState = GameManager.State.AWAKEN;
             Debug.Log(GameManager.gameManager.missionState);
@@ -20,9 +25,6 @@ public class HandFan : MonoBehaviour, IItem
             life.RestoreHealth(itemTemperature);
             Debug.Log("온도 감소");
             Destroy(gameObject);
-            
-            // script_nyj 참고
-            Step.stepInstance.CompleteCurrentStep();
         }
     }
 }

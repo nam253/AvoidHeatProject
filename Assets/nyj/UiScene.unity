@@ -1504,17 +1504,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3536650689923084857, guid: 18eb500023b454a04ba13bb7bab69fb0, type: 3}
   m_PrefabInstance: {fileID: 4147489995551182573}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &917386447 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4168764643186246129, guid: 680bd9d55adb840178812c27c28ffe21, type: 3}
-  m_PrefabInstance: {fileID: 5877255735777888014}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a58c56af67131478f84d835eecd9c363, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1071487908 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 783930722901992005, guid: d0b91df2fbd764761b1700c1b00c1316, type: 3}
@@ -2155,10 +2144,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 486616897}
     m_Modifications:
-    - target: {fileID: 1412444269013724706, guid: 2783ef4e11a244276a2268229beccef2, type: 3}
-      propertyPath: step
-      value: 
-      objectReference: {fileID: 917386447}
     - target: {fileID: 3409456820229660609, guid: 2783ef4e11a244276a2268229beccef2, type: 3}
       propertyPath: m_Camera
       value: 
@@ -2245,10 +2230,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6468297282642285525, guid: 2783ef4e11a244276a2268229beccef2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8111926172205189498, guid: 2783ef4e11a244276a2268229beccef2, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2339,13 +2320,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 68431595}
     - target: {fileID: 4168764643186246129, guid: 680bd9d55adb840178812c27c28ffe21, type: 3}
+      propertyPath: CallingButton
+      value: 
+      objectReference: {fileID: 5052912161020889821}
+    - target: {fileID: 4168764643186246129, guid: 680bd9d55adb840178812c27c28ffe21, type: 3}
       propertyPath: TemperatureText
       value: 
       objectReference: {fileID: 483607258}
-    - target: {fileID: 4168764643186246129, guid: 680bd9d55adb840178812c27c28ffe21, type: 3}
-      propertyPath: stepPanels.Array.size
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 4168764643186246129, guid: 680bd9d55adb840178812c27c28ffe21, type: 3}
       propertyPath: 'stepPanels.Array.data[0]'
       value: 

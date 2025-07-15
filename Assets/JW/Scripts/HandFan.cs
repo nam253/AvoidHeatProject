@@ -12,7 +12,7 @@ public class HandFan : MonoBehaviour, IItem
         // LivingEntity컴포넌트가 있다면
         if (life != null)
         {
-            GameManager.gameManager.missionState = GameManager.State.ICEBAG;
+            GameManager.gameManager.missionState = GameManager.State.AWAKEN;
             Debug.Log(GameManager.gameManager.missionState);
             
             // 체력 회복 실행

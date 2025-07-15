@@ -59,7 +59,7 @@ public class Stream : MonoBehaviour
          human.RestoreHealth(amount);
          if (!isAlcohol)
          {
-            GameManager.gameManager.missionState = GameManager.State.WATERING;
+            GameManager.gameManager.missionState = GameManager.State.FANNING;
             Debug.Log(GameManager.gameManager.missionState);   
          }
          Debug.Log($"Other Layer: {other.gameObject.layer}, Mask Value: {targetLayers.value}");

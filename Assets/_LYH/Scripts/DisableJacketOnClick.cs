@@ -1,10 +1,9 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.XR.Interaction.Toolkit;
 
-public class DisableClothesOnClick : MonoBehaviour
+public class DisableJacketOnClick : MonoBehaviour
 {
-       [Tooltip("버튼 입력용 Action(Trigger 등)")]
+    [Tooltip("버튼 입력용 Action(Trigger 등)")]
     public InputActionProperty clickAction;
 
     [Tooltip("교체할 캐릭터 Prefab")]
@@ -33,22 +32,14 @@ public class DisableClothesOnClick : MonoBehaviour
         Ray ray = new Ray(transform.position, transform.forward);
         if (Physics.Raycast(ray, out var hit, maxDistance, targetLayer))
         {
-            // 교체할 대상의 루트
-            var oldRoot = hit.transform.root.gameObject;
+            var jacket = hit.transform.gameObject.GetComponentInChildren<Jacket>();
 
-            // 새 Prefab 생성(같은 위치·회전·부모로)
-            var newObj = Instantiate(
-                replacementPrefab,
-                oldRoot.transform.position,
-                oldRoot.transform.rotation,
-                oldRoot.transform.parent
-            );
+            Debug.Log(jacket);
 
-            // (선택) 기존 Transform 세팅 복사
-            newObj.transform.localScale = oldRoot.transform.localScale;
-            GameManager.gameManager.missionState = GameManager.State.LOOSENINGJACKET;
-            // 원본 삭제
-            Destroy(oldRoot);
+            if (jacket != null)
+            {
+                jacket.gameObject.SetActive(false);
+            }
         }
     }
 }

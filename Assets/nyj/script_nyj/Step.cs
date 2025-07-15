@@ -6,7 +6,6 @@ public class Step : MonoBehaviour
     public GameObject[] stepPanels;
     public int currentStep = 0;
     public LivingEntity livingentity;
-    public float temperatureDropPerStep = 0.75f;
 
     public TextMeshProUGUI TemperatureText;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -33,16 +32,16 @@ public class Step : MonoBehaviour
             stepPanels[currentStep].SetActive(true);
         }
 
-        if (currentStep > 1)
+        /*if (currentStep > 1)
         {
             livingentity.startingTemperature -= temperatureDropPerStep;
-        }
+        }*/
         UpdateTemperatrueUI();
     }
 
-    void UpdateTemperatrueUI()
+    public void UpdateTemperatrueUI()
     {
-        TemperatureText.text = "환자 체온: " + livingentity.startingTemperature.ToString("F1") + "°C";
+        TemperatureText.text = "환자 체온: " + livingentity.humanTemperature.ToString("F1") + "°C";
     }
 
     

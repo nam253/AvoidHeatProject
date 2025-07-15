@@ -24,7 +24,6 @@ public class PhoneCall : MonoBehaviour
         }
         
     }
-
     public void OpenPhone()
     {
         Phoneimg.SetActive(true);
@@ -40,7 +39,6 @@ public class PhoneCall : MonoBehaviour
             audioSource.PlayOneShot(buttonSound);
         }
     }
-
     public void ClosePhone()
     {
         GameManager.gameManager.missionState = GameManager.State.AVOIDINGSUN;
@@ -53,6 +51,4 @@ public class PhoneCall : MonoBehaviour
         }
         Phoneimg.SetActive(false);
     }
-
-    
 }

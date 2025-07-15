@@ -2247,11 +2247,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8111926172205189498, guid: 2783ef4e11a244276a2268229beccef2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2783ef4e11a244276a2268229beccef2, type: 3}
+--- !u!1 &5052912161020889821 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6836949477119701719, guid: 2783ef4e11a244276a2268229beccef2, type: 3}
+  m_PrefabInstance: {fileID: 5052912161020889820}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5052912161020889822 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3726637006557704675, guid: 2783ef4e11a244276a2268229beccef2, type: 3}
+  m_PrefabInstance: {fileID: 5052912161020889820}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5052912161020889823 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6032698457928600635, guid: 2783ef4e11a244276a2268229beccef2, type: 3}
+  m_PrefabInstance: {fileID: 5052912161020889820}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5211030507698782090 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2937789749439219102, guid: 18eb500023b454a04ba13bb7bab69fb0, type: 3}
@@ -2324,6 +2343,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 483607258}
     - target: {fileID: 4168764643186246129, guid: 680bd9d55adb840178812c27c28ffe21, type: 3}
+      propertyPath: stepPanels.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4168764643186246129, guid: 680bd9d55adb840178812c27c28ffe21, type: 3}
       propertyPath: 'stepPanels.Array.data[0]'
       value: 
       objectReference: {fileID: 739996877}
@@ -2338,7 +2361,19 @@ PrefabInstance:
     - target: {fileID: 4168764643186246129, guid: 680bd9d55adb840178812c27c28ffe21, type: 3}
       propertyPath: 'stepPanels.Array.data[3]'
       value: 
+      objectReference: {fileID: 5052912161020889823}
+    - target: {fileID: 4168764643186246129, guid: 680bd9d55adb840178812c27c28ffe21, type: 3}
+      propertyPath: 'stepPanels.Array.data[4]'
+      value: 
+      objectReference: {fileID: 5052912161020889822}
+    - target: {fileID: 4168764643186246129, guid: 680bd9d55adb840178812c27c28ffe21, type: 3}
+      propertyPath: 'stepPanels.Array.data[5]'
+      value: 
       objectReference: {fileID: 1125615753}
+    - target: {fileID: 4168764643186246129, guid: 680bd9d55adb840178812c27c28ffe21, type: 3}
+      propertyPath: 'stepPanels.Array.data[6]'
+      value: 
+      objectReference: {fileID: 5052912161020889821}
     - target: {fileID: 4543854654343981335, guid: 680bd9d55adb840178812c27c28ffe21, type: 3}
       propertyPath: bodyText
       value: 

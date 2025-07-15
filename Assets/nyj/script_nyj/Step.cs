@@ -8,6 +8,8 @@ public class Step : MonoBehaviour
     public int currentStep = 0;
     public LivingEntity livingentity;
 
+    public GameObject CallingButton;
+
     public TextMeshProUGUI TemperatureText;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -39,12 +41,21 @@ public class Step : MonoBehaviour
             stepPanels[currentStep].SetActive(true);
         }
 
+<<<<<<< HEAD
 
         /*if (currentStep > 1)
+=======
+        if (currentStep == 1 && CallingButton != null)
+>>>>>>> 32813a69588812d64038ee9326ea0f88e140177c
         {
-            livingentity.startingTemperature -= temperatureDropPerStep;
-        }*/
-        UpdateTemperatrueUI();
+            CallingButton.SetActive(false);
+        }
+
+        /*if (currentStep > 1)
+            {
+                livingentity.startingTemperature -= temperatureDropPerStep;
+            }*/
+            UpdateTemperatrueUI();
     }
 
     public void UpdateTemperatrueUI()

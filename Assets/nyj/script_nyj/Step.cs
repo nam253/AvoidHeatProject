@@ -41,12 +41,7 @@ public class Step : MonoBehaviour
             stepPanels[currentStep].SetActive(true);
         }
 
-<<<<<<< HEAD
-
-        /*if (currentStep > 1)
-=======
         if (currentStep == 1 && CallingButton != null)
->>>>>>> 32813a69588812d64038ee9326ea0f88e140177c
         {
             CallingButton.SetActive(false);
         }

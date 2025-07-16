@@ -414,6 +414,7 @@ RectTransform:
   - {fileID: 4984354408042080605}
   - {fileID: 867309667764266604}
   - {fileID: 1133435255403064617}
+  - {fileID: 5970076430147737919}
   m_Father: {fileID: 3639330896996163621}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -488,16 +489,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5072790781823902453}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 9}
+  m_LocalPosition: {x: 0, y: 0, z: 8.999944}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3654896284195931500}
-  m_Father: {fileID: 3639330896996163621}
+  m_Father: {fileID: 296689664281525239}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 61, y: -35}
+  m_AnchoredPosition: {x: 311, y: -653.3254}
   m_SizeDelta: {x: 262.1, y: 48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1409870129139511076
@@ -548,7 +549,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 6206271514733741073}
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
@@ -654,7 +655,6 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 296689664281525239}
-  - {fileID: 5970076430147737919}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}

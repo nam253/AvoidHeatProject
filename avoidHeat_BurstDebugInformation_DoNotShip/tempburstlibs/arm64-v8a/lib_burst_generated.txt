@@ -1,4 +1,4 @@
-Library: /Users/mr62/Desktop/avoidHeat/Temp/BurstOutput/tempburstlibs/arm64-v8a/lib_burst_generated
+Library: /Users/mr62/Desktop/AvoidHeatProject/AvoidHeatProject/Temp/BurstOutput/tempburstlibs/arm64-v8a/lib_burst_generated
 --platform=Android
 --backend=burst-llvm-18
 --target=ARMV8A_AARCH64
@@ -8,10 +8,10 @@ Library: /Users/mr62/Desktop/avoidHeat/Temp/BurstOutput/tempburstlibs/arm64-v8a/
 --float-precision=Standard
 --target-framework=NetFramework
 --generate-link-xml=Temp/burst.link.xml
---temp-folder=/Users/mr62/Desktop/avoidHeat/Temp/Burst
+--temp-folder=/Users/mr62/Desktop/AvoidHeatProject/AvoidHeatProject/Temp/Burst
 --key-folder=/Applications/Unity/Hub/Editor/6000.0.46f1/PlaybackEngines/AndroidPlayer
---decode-folder=/Users/mr62/Desktop/avoidHeat/Library/Burst
---output=/Users/mr62/Desktop/avoidHeat/Temp/BurstOutput/tempburstlibs/arm64-v8a/lib_burst_generated
+--decode-folder=/Users/mr62/Desktop/AvoidHeatProject/AvoidHeatProject/Library/Burst
+--output=/Users/mr62/Desktop/AvoidHeatProject/AvoidHeatProject/Temp/BurstOutput/tempburstlibs/arm64-v8a/lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=Unity.Jobs.IJobExtensions+JobStruct`1[[UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Jobs.Float4TweenJob, Unity.XR.Interaction.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Jobs.Float4TweenJob&, Unity.XR.Interaction.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--34aec427743d7d01c0cb7a219c9fbe32

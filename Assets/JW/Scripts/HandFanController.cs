@@ -110,16 +110,15 @@ public class HandFanController : MonoBehaviour
     {
         if (!isActive) return;
 
-        if (GameManager.gameManager.missionState == GameManager.State.FANNING)
-        {
-            // script_nyj 참고
-            Step.stepInstance.CompleteCurrentStep();
-        }
-
         if (other.TryGetComponent<HumanTemperature>(out var human) && !human.dead)
         {
-
-            GameManager.gameManager.missionState = GameManager.State.ICEBAG;
+            if (GameManager.gameManager.missionState == GameManager.State.FANNING)
+            {
+                // script_nyj 참고
+                Step.stepInstance.CompleteCurrentStep();
+                GameManager.gameManager.missionState = GameManager.State.ICEBAG;
+            }
+            
             Debug.Log(GameManager.gameManager.missionState);
             human.RestoreHealth(-coolingRatePerSecond * Time.deltaTime);
             Debug.Log(human.humanTemperature);

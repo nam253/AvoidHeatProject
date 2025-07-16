@@ -36,7 +36,7 @@ public class DisableJacketOnClick : MonoBehaviour
 
             Debug.Log(jacket);
 
-            if (jacket != null)
+            if (GameManager.gameManager.missionState == GameManager.State.LOOSENINGJACKET && jacket != null)
             {
                 jacket.gameObject.SetActive(false);
             }

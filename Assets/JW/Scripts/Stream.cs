@@ -59,7 +59,10 @@ public class Stream : MonoBehaviour
          human.RestoreHealth(amount);
          if (!isAlcohol)
          {
-            GameManager.gameManager.missionState = GameManager.State.FANNING;
+            if (GameManager.gameManager.missionState == GameManager.State.WATERING)
+            {
+               GameManager.gameManager.missionState = GameManager.State.FANNING;
+            }
             Debug.Log(GameManager.gameManager.missionState);   
 
             // script_nyj 참고

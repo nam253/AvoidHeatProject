@@ -12,7 +12,7 @@ public class Jacket : MonoBehaviour, IItem
 
     void OnDisable()
     {
-        if (GameManager.gameManager.missionState == GameManager.State.LOOSENINGJACKET && livingEntity != null)
+        if (livingEntity != null)
         {
             livingEntity.RestoreHealth(-1);
             Step.stepInstance.CompleteCurrentStep();

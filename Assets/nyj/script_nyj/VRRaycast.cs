@@ -51,7 +51,8 @@ public class VRRaycast : MonoBehaviour
                 uiPanel.SetActive(true);
                 uiShownOnce = true;
 
-                uiPanel.transform.position = hit.point + new Vector3(0, 0.2f, 0);
+                uiPanel.transform.position = Camera.main.transform.position + new Vector3(0, 0, 1f);
+                // uiPanel.transform.position = hit.point + new Vector3(0, 0.2f, 0);
                 uiPanel.transform.LookAt(Camera.main.transform);
                 uiPanel.transform.Rotate(0, 180f, 0);
             }

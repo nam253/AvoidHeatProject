@@ -41,4 +41,14 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    void Update()
+    {
+        if (missionState == State.AWAKEN && GameObject.Find("Patient") != null)
+        {
+            TryGetComponent<PrefabShifting>(out PrefabShifting shifting);
+
+            shifting.ShiftPrefab();
+        }
+    }
 }

@@ -463,6 +463,7 @@ GameObject:
   - component: {fileID: 4461704661331906363}
   - component: {fileID: 1276549835755539754}
   - component: {fileID: 1009744797976305191}
+  - component: {fileID: 1905763615377588974}
   m_Layer: 5
   m_Name: EmergencyCanvas
   m_TagString: Untagged
@@ -479,7 +480,7 @@ RectTransform:
   m_GameObject: {fileID: 8230916739173529074}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 16.533966}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.32523885, y: 0.38128, z: 0.107319765}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4444015032424312212}
@@ -548,7 +549,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8230916739173529074}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name: 
@@ -565,7 +566,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8230916739173529074}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
   m_Name: 
@@ -577,3 +578,28 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
+--- !u!114 &1905763615377588974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8230916739173529074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56e5d5c3dd46e4aaabac4c57dfb2558a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashImages:
+  - {fileID: 8568569694668580601}
+  - {fileID: 5472816767936820772}
+  - {fileID: 3271882778292909914}
+  - {fileID: 3710350069572644776}
+  - {fileID: 6250019197546507804}
+  - {fileID: 8080490220482663331}
+  maxAlpha: 0.5
+  minTemp: 36.5
+  maxTemp: 39.5
+  minPeriod: 0.5
+  maxPeriod: 3
+  playerTemperature: {fileID: 0}

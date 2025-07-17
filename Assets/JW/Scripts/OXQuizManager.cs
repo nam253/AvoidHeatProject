@@ -12,6 +12,8 @@ public class OXQuizManager : MonoBehaviour
     [Header("Quiz Data")]
     public string[] questions;    // 예: { "태양은 별이다.", "바다는 민물이다." }
     public bool[] answers;        // 질문별 정답: true=O, false=X
+    public AudioClip correctSound;
+    public AudioClip wrongSound;
 
     private int currentIndex = 0;
 
@@ -44,10 +46,12 @@ public class OXQuizManager : MonoBehaviour
         bool correct = answers[currentIndex];
         if (isO == correct)
         {
+            GetComponent<AudioSource>().PlayOneShot(correctSound);
             feedbackText.text = "정답!";
         }
         else
         {
+            GetComponent<AudioSource>().PlayOneShot(wrongSound);
             feedbackText.text = "오답!";
         }
 

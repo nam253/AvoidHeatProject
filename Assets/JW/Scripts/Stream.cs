@@ -17,6 +17,8 @@ public class Stream : MonoBehaviour
    // 플레이어 레이어 번호 캐시
    public LayerMask targetLayers;
 
+   public AudioClip waterfallSound;
+
    private void Awake()
    {
       lineRenderer     = GetComponent<LineRenderer>();
@@ -56,6 +58,7 @@ public class Stream : MonoBehaviour
       // 2) HumanTemperature 컴포넌트 확인
       if (other.TryGetComponent<HumanTemperature>(out var human))
       {
+         GetComponent<AudioSource>().PlayOneShot(waterfallSound);
          human.RestoreHealth(amount);
          if (!isAlcohol)
          {
@@ -64,7 +67,7 @@ public class Stream : MonoBehaviour
                GameManager.gameManager.missionState = GameManager.State.FANNING;
             }
             Debug.Log(GameManager.gameManager.missionState);   
-
+            
             // script_nyj 참고
             Step.stepInstance.CompleteCurrentStep();
          }
@@ -80,6 +83,7 @@ public class Stream : MonoBehaviour
 
    private IEnumerator EndPour()
    {
+      GetComponent<AudioSource>().Stop();
       while (!HasReachedPosition(0, targetPosition))
       {
          AnimateToPosition(0,targetPosition);

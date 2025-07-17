@@ -6264,7 +6264,7 @@ PrefabInstance:
     - target: {fileID: 4928598593618602065, guid: 150c54d71d9994d80a143fbbf5a7bc58, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
-      objectReference: {fileID: 12800000, guid: 79a4bb95f7867464b852a549ae5bcfb7, type: 3}
+      objectReference: {fileID: 12800000, guid: e1fc3dd0aa43c4229ab91474060a2edc, type: 3}
     - target: {fileID: 6294720654861859618, guid: 150c54d71d9994d80a143fbbf5a7bc58, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -6360,7 +6360,7 @@ PrefabInstance:
     - target: {fileID: 6299744846481253652, guid: 150c54d71d9994d80a143fbbf5a7bc58, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
-      objectReference: {fileID: 12800000, guid: 79a4bb95f7867464b852a549ae5bcfb7, type: 3}
+      objectReference: {fileID: 12800000, guid: e1fc3dd0aa43c4229ab91474060a2edc, type: 3}
     - target: {fileID: 7961046375431911244, guid: 150c54d71d9994d80a143fbbf5a7bc58, type: 3}
       propertyPath: m_Name
       value: QuizCanvas

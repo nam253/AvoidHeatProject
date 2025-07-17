@@ -1971,6 +1971,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnNumberPressed
       objectReference: {fileID: 0}
+    - target: {fileID: 8783010529170198015, guid: d134ef877b77d41998120fe252b6c829, type: 3}
+      propertyPath: buttonSound1
+      value: 
+      objectReference: {fileID: 8300000, guid: 70a822e386b7d407695ff8eee2ccb46c, type: 3}
+    - target: {fileID: 8783010529170198015, guid: d134ef877b77d41998120fe252b6c829, type: 3}
+      propertyPath: buttonSound9
+      value: 
+      objectReference: {fileID: 8300000, guid: 055420dece85b4b7dabeb75d2c2e8644, type: 3}
+    - target: {fileID: 8783010529170198015, guid: d134ef877b77d41998120fe252b6c829, type: 3}
+      propertyPath: endCallNarration
+      value: 
+      objectReference: {fileID: 8300000, guid: cd7a7df38fe5b47e3a8036a95c74ea2d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

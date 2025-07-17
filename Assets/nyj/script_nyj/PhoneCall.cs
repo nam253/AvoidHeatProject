@@ -8,14 +8,13 @@ public class PhoneCall : MonoBehaviour
     public TextMeshProUGUI NumberText;
 
     public AudioSource audioSource;
-    public AudioClip buttonSound;
+    public AudioClip buttonSound1;
+    public AudioClip buttonSound9;
 
     public AudioClip endCallNarration;
 
     private string phoneNumber = "";
-    // public Step step;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
     void Start()
     {
         if (Phoneimg != null)
@@ -34,9 +33,21 @@ public class PhoneCall : MonoBehaviour
         phoneNumber += digit;
         NumberText.text = phoneNumber;
 
-        if (audioSource && buttonSound)
+        if (audioSource)
         {
-            audioSource.PlayOneShot(buttonSound);
+            switch (digit)
+            {
+                case "1":
+                    if (buttonSound1 != null)
+                        audioSource.PlayOneShot(buttonSound1);
+                    break;
+                case "9":
+                    if (buttonSound9 != null)
+                        audioSource.PlayOneShot(buttonSound9);
+                    break;
+
+            }
+                
         }
     }
     public void ClosePhone()

@@ -9,8 +9,10 @@ public class VRRaycast : MonoBehaviour
     public string targetTag = "Character";
     public GameObject uiPanel;
     public Button closeButton;
-
     public GameObject missionPanel;
+
+    public AudioSource audioSource;
+     public AudioClip buttonClickSound;
     private bool uiShownOnce = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -61,10 +63,14 @@ public class VRRaycast : MonoBehaviour
 
     public void CloseUIPanel()
     {
-        if (uiPanel != null)
+        if (audioSource != null && buttonClickSound != null)
         {
-            uiPanel.SetActive(false);
+            audioSource.PlayOneShot(buttonClickSound);
         }
+        if (uiPanel != null)
+            {
+                uiPanel.SetActive(false);
+            }
         if (missionPanel != null)
         {
             missionPanel.SetActive(true);

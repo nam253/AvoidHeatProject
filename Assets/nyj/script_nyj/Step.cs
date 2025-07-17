@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Lumin;
 
 public class Step : MonoBehaviour
 {
@@ -7,10 +8,10 @@ public class Step : MonoBehaviour
     public GameObject[] stepPanels;
     public int currentStep = 0;
     public LivingEntity livingentity;
-
     public GameObject CallingButton;
-
     public TextMeshProUGUI TemperatureText;
+    public AudioSource audioSource;
+    public AudioClip buttonClickSound;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -31,6 +32,10 @@ public class Step : MonoBehaviour
 
     public void CompleteCurrentStep()
     {
+        if (audioSource != null && buttonClickSound != null)
+        {
+            audioSource.PlayOneShot(buttonClickSound);
+        }
         stepPanels[currentStep].SetActive(false);
 
         currentStep++;

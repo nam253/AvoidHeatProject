@@ -42,7 +42,6 @@ public class Stream : MonoBehaviour
    {
       while (gameObject.activeSelf)
       {
-         GetComponent<AudioSource>().PlayOneShot(waterfallSound);
          targetPosition = FindEndPoint();
          MoveToPosition(0,transform.position);
          AnimateToPosition(1,targetPosition);
@@ -59,6 +58,7 @@ public class Stream : MonoBehaviour
       // 2) HumanTemperature 컴포넌트 확인
       if (other.TryGetComponent<HumanTemperature>(out var human))
       {
+         GetComponent<AudioSource>().PlayOneShot(waterfallSound);
          human.RestoreHealth(amount);
          if (!isAlcohol)
          {
@@ -67,7 +67,7 @@ public class Stream : MonoBehaviour
                GameManager.gameManager.missionState = GameManager.State.FANNING;
             }
             Debug.Log(GameManager.gameManager.missionState);   
-
+            
             // script_nyj 참고
             Step.stepInstance.CompleteCurrentStep();
          }

@@ -33726,6 +33726,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MissionPanelCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3695871606641110656, guid: 2783ef4e11a244276a2268229beccef2, type: 3}
+      propertyPath: m_text
+      value: "4. \uD658\uC790\uC758 \uBAB8\uC5D0 \uC2DC\uC6D0\uD55C \uBB3C\uC744
+        \uBD80\uC5B4 \uC801\uC154\uC90D\uB2C8\uB2E4.\n\n\n"
+      objectReference: {fileID: 0}
     - target: {fileID: 4195889957399526804, guid: 2783ef4e11a244276a2268229beccef2, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -33845,6 +33850,10 @@ PrefabInstance:
     - target: {fileID: 7583780255959846550, guid: 2783ef4e11a244276a2268229beccef2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7966048484531258148, guid: 2783ef4e11a244276a2268229beccef2, type: 3}
+      propertyPath: m_text
+      value: "1. 119\uC5D0 \uC989\uC2DC \uC2E0\uACE0\uD569\uB2C8\uB2E4.\n"
       objectReference: {fileID: 0}
     - target: {fileID: 8111926172205189498, guid: 2783ef4e11a244276a2268229beccef2, type: 3}
       propertyPath: m_IsActive
@@ -37643,7 +37652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.08
+      value: 3.549
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -37663,7 +37672,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -5.493
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -37703,9 +37712,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 202364687, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1302885525}
-    - targetCorrespondingSourceObject: {fileID: 1670256624, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1302885521}
     - targetCorrespondingSourceObject: {fileID: 1670256624, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1302885520}
@@ -37765,25 +37771,6 @@ MonoBehaviour:
   targetLayer:
     serializedVersion: 2
     m_Bits: 128
---- !u!114 &1302885521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1302885518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb8f9564c3618470a93ba80da7edb5b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rayDistance: 10
-  targetTag: Character
-  uiPanel: {fileID: 1701022912}
-  closeButton: {fileID: 1701022911}
-  missionPanel: {fileID: 1177883972}
-  audioSource: {fileID: 1302885524}
-  buttonClickSound: {fileID: 8300000, guid: eecd452b853124183972808f13988a04, type: 3}
 --- !u!114 &1302885522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53300,6 +53287,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1822719637}
   - component: {fileID: 1822719636}
+  - component: {fileID: 1822719638}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -53348,6 +53336,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1822719638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822719635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92be382f98fb8498ab89968520cf7253, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1823064999
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -6262,6 +6262,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 1302885517}
     m_Modifications:
     - target: {fileID: 4928598593618602065, guid: 150c54d71d9994d80a143fbbf5a7bc58, type: 3}
+      propertyPath: m_Color.b
+      value: 0.9622642
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928598593618602065, guid: 150c54d71d9994d80a143fbbf5a7bc58, type: 3}
+      propertyPath: m_Color.g
+      value: 0.9622642
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928598593618602065, guid: 150c54d71d9994d80a143fbbf5a7bc58, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9622642
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928598593618602065, guid: 150c54d71d9994d80a143fbbf5a7bc58, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: e1fc3dd0aa43c4229ab91474060a2edc, type: 3}
@@ -6356,6 +6368,18 @@ PrefabInstance:
     - target: {fileID: 6294720654861859618, guid: 150c54d71d9994d80a143fbbf5a7bc58, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6299744846481253652, guid: 150c54d71d9994d80a143fbbf5a7bc58, type: 3}
+      propertyPath: m_Color.b
+      value: 0.9647059
+      objectReference: {fileID: 0}
+    - target: {fileID: 6299744846481253652, guid: 150c54d71d9994d80a143fbbf5a7bc58, type: 3}
+      propertyPath: m_Color.g
+      value: 0.9647059
+      objectReference: {fileID: 0}
+    - target: {fileID: 6299744846481253652, guid: 150c54d71d9994d80a143fbbf5a7bc58, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9647059
       objectReference: {fileID: 0}
     - target: {fileID: 6299744846481253652, guid: 150c54d71d9994d80a143fbbf5a7bc58, type: 3}
       propertyPath: m_FontData.m_Font
@@ -37684,7 +37708,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -8.61
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -37800,6 +37824,8 @@ MonoBehaviour:
   uiPanel: {fileID: 1701022912}
   closeButton: {fileID: 1701022911}
   missionPanel: {fileID: 1177883972}
+  audioSource: {fileID: 0}
+  buttonClickSound: {fileID: 0}
 --- !u!114 &1302885522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37854,6 +37880,8 @@ MonoBehaviour:
   uiPanel: {fileID: 1701022912}
   closeButton: {fileID: 1701022911}
   missionPanel: {fileID: 1177883972}
+  audioSource: {fileID: 0}
+  buttonClickSound: {fileID: 0}
 --- !u!1001 &1309077806
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53147,6 +53175,8 @@ MonoBehaviour:
   livingentity: {fileID: 1972424734}
   CallingButton: {fileID: 1177883973}
   TemperatureText: {fileID: 1177883970}
+  audioSource: {fileID: 0}
+  buttonClickSound: {fileID: 0}
 --- !u!4 &1822719637
 Transform:
   m_ObjectHideFlags: 0

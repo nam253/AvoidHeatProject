@@ -34,6 +34,10 @@ public class SceneMove : MonoBehaviour
     {
         SceneManager.LoadScene(i);
     }
-    
+
+    public void SolveQuiz()
+    {
+        SceneManager.LoadScene("Quiz");
+    }
     
 }

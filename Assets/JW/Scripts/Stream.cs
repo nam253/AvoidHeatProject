@@ -17,6 +17,8 @@ public class Stream : MonoBehaviour
    // 플레이어 레이어 번호 캐시
    public LayerMask targetLayers;
 
+   public AudioClip waterfallSound;
+
    private void Awake()
    {
       lineRenderer     = GetComponent<LineRenderer>();
@@ -40,6 +42,7 @@ public class Stream : MonoBehaviour
    {
       while (gameObject.activeSelf)
       {
+         GetComponent<AudioSource>().PlayOneShot(waterfallSound);
          targetPosition = FindEndPoint();
          MoveToPosition(0,transform.position);
          AnimateToPosition(1,targetPosition);
@@ -80,6 +83,7 @@ public class Stream : MonoBehaviour
 
    private IEnumerator EndPour()
    {
+      GetComponent<AudioSource>().Stop();
       while (!HasReachedPosition(0, targetPosition))
       {
          AnimateToPosition(0,targetPosition);
